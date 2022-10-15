@@ -13,12 +13,20 @@ public class SMSController {
 	
 	@GetMapping("/message")
 	public String message(@RequestBody SMSModels.MessageRequest body) {
+		String inputErrors = body.InputErrors();
+		if (inputErrors != null) {
+			return inputErrors;
+		}
 		SMS.SendMessage(body.to, body.message);
 		return "Message sent: " + Time.stamp();
 	}
 
 	@GetMapping("/messageMe")
 	public String messageMe(@RequestBody SMSModels.MessageMeRequest body) {
+		String inputErrors = body.InputErrors();
+		if (inputErrors != null) {
+			return inputErrors;
+		}
 		SMS.SendMessageToMe(body.message);
 		return "Message sent: " + Time.stamp();
 	}
