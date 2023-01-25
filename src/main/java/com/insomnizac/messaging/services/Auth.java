@@ -1,6 +1,6 @@
-package com.insomnizactwilio.insomnizactwilioapi.services;
+package com.insomnizac.messaging.services;
 
-import com.insomnizactwilio.insomnizactwilioapi.configs.Config;
+import com.insomnizac.messaging.configs.Config;
 
 public class Auth {
 	public static boolean validateToken(String bearerToken) {

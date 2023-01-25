@@ -1,6 +1,6 @@
-package com.insomnizactwilio.insomnizactwilioapi.services;
+package com.insomnizac.messaging.services;
 
-import com.insomnizactwilio.insomnizactwilioapi.configs.Config;
+import com.insomnizac.messaging.configs.Config;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 // import com.twilio.type.PhoneNumber;

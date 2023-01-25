@@ -1,4 +1,4 @@
-package com.insomnizactwilio.insomnizactwilioapi.configs;
+package com.insomnizac.messaging.configs;
 
 import io.github.cdimascio.dotenv.Dotenv;
 

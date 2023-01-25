@@ -1,4 +1,4 @@
-package com.insomnizactwilio.insomnizactwilioapi.utils;
+package com.insomnizac.messaging.utils;
 
 public class Time {
 	public static String stamp() {

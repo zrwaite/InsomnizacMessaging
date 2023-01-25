@@ -1,8 +1,8 @@
-package com.insomnizactwilio.insomnizactwilioapi.models;
+package com.insomnizac.messaging.models;
 
 import java.util.ArrayList;
 
-import com.insomnizactwilio.insomnizactwilioapi.utils.StringUtils;
+import com.insomnizac.messaging.utils.StringUtils;
 
 public class SMSModels {
 	public static class MessageRequest {

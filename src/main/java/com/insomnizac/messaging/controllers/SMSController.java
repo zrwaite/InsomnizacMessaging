@@ -1,14 +1,14 @@
-package com.insomnizactwilio.insomnizactwilioapi.controllers;
+package com.insomnizac.messaging.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.insomnizactwilio.insomnizactwilioapi.models.SMSModels;
-import com.insomnizactwilio.insomnizactwilioapi.services.Auth;
-import com.insomnizactwilio.insomnizactwilioapi.services.SMS;
-import com.insomnizactwilio.insomnizactwilioapi.utils.Time;
+import com.insomnizac.messaging.models.SMSModels;
+import com.insomnizac.messaging.services.Auth;
+import com.insomnizac.messaging.services.SMS;
+import com.insomnizac.messaging.utils.Time;
 
 @RestController
 public class SMSController {
