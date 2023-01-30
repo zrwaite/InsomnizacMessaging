@@ -7,26 +7,26 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.insomnizac.messaging.models.MessageModels;
 import com.insomnizac.messaging.services.Auth;
-import com.insomnizac.messaging.services.SMS;
+import com.insomnizac.messaging.services.Email;
 import com.insomnizac.messaging.utils.Time;
 
 @RestController
-public class SMSController {
-	@PostMapping("/sms")
-	public String Text(@RequestBody MessageModels.MessageRequest body, @RequestHeader("Authorization") String bearerToken) {
+public class EmailController {
+	@PostMapping("/email")
+	public String Email(@RequestBody MessageModels.MessageRequest body, @RequestHeader("Authorization") String bearerToken) {
 		if (!Auth.validateToken(bearerToken)) return "Invalid API key";
 		String inputErrors = body.InputErrors();
 		if (inputErrors != null) return inputErrors;
-		SMS.SendMessage(body.to, body.message);
+		Email.SendEmail(body.to, body.message);
 		return "Message sent: " + Time.stamp();
 	}
 
-	@PostMapping("/sms_me")
-	public String TextMe(@RequestBody MessageModels.MessageMeRequest body, @RequestHeader("Authorization") String bearerToken) {
+	@PostMapping("/email_me")
+	public String EmailMe(@RequestBody MessageModels.MessageMeRequest body, @RequestHeader("Authorization") String bearerToken) {
 		if (!Auth.validateToken(bearerToken)) return "Invalid API key";
 		String inputErrors = body.InputErrors();
 		if (inputErrors != null) return inputErrors;
-		SMS.SendMessageToMe(body.message);
+		Email.SendEmailToMe(body.message);
 		return "Message sent: " + Time.stamp();
 	}
 

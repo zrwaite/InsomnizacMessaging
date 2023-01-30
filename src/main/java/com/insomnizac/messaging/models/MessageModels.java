@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import com.insomnizac.messaging.utils.StringUtils;
 
-public class SMSModels {
+public class MessageModels {
 	public static class MessageRequest {
 		public String to;
 		public String message;
