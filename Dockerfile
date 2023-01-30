@@ -1,10 +1,4 @@
-FROM alpine:3.14
-WORKDIR /app
-COPY . .
-RUN ./mvnw install
-
-FROM openjdk:17.0.2-slim-buster
-COPY target/*.jar app.jar
-COPY .env .env
-EXPOSE 8020
-CMD ["java","-jar","/app.jar"]
+FROM openjdk:8-jdk-alpine
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
