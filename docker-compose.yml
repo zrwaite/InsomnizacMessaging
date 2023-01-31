@@ -3,6 +3,6 @@ services:
     api:
         env_file: './.env'
         build: '.'
-        image: 'zrwaite/insomnizac_twilio:0.0.0'
+        image: 'zrwaite/insomnizac_messaging:1.0.0'
         ports:
             - '8020:8020'
